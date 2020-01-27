@@ -22,16 +22,16 @@ function myTimer() {
             correctAnswer: 1
           }, {
             question: "QUESTION 2",
-            choices: ["1", "TEST", "3", "4"],
-            correctAnswer: "TEST"
+            choices: ["1", 2, "3", "4"],
+            correctAnswer: 2
           }, {
             question: "QUESTION 3",
-            choices: ["1", "2", "3", "4"],
-            correctAnswer: "1"
+            choices: ["1", "2", 3, "4"],
+            correctAnswer: 3
           }, {
             question: "QUESTION 4",
-            choices: ["1", "2", "3", "4"],
-            correctAnswer: "1"
+            choices: ["1", "2", "3", 4],
+            correctAnswer: 4
           }];
     
     var questionCounter = 0; //Tracks question number
@@ -41,7 +41,7 @@ function myTimer() {
     // DISPLAY 1ST QUESTION
     displayNext();
     
-    // NEXT BUTTON
+    // CLICK NEXT BUTTON
     $('#next').on('click', function (e) {
       e.preventDefault();
       
@@ -51,7 +51,7 @@ function myTimer() {
       }
       choose();
       
-      // If no user selection, progress is stopped
+      // NO USER SELECTION
       if (isNaN(selections[questionCounter])) {
         alert('Please make a selection!');
       } else {
@@ -60,7 +60,7 @@ function myTimer() {
       }
     });
     
-    // Click handler for the 'prev' button
+    // CLICK HANDLER PREVIOUS
     $('#prev').on('click', function (e) {
       e.preventDefault();
       
@@ -72,7 +72,7 @@ function myTimer() {
       displayNext();
     });
     
-    // Click handler for the 'Start Over' button
+    // CLICK FOR START OVER
     $('#start').on('click', function (e) {
       e.preventDefault();
       
@@ -93,8 +93,7 @@ function myTimer() {
       $(this).removeClass('active');
     });
     
-    // Creates and returns the div that contains the questions and 
-    // the answer selections
+    // CREATES QUESTION AND ANSWER DIVS
     function createQuestionElement(index) {
       var qElement = $('<div>', {
         id: 'question'
@@ -112,7 +111,7 @@ function myTimer() {
       return qElement;
     }
     
-    // Creates a list of the answer choices as radio inputs
+    // CREATE LIST OF ANSWERS
     function createRadios(index) {
       var radioList = $('<ul>');
       var item;
@@ -127,12 +126,12 @@ function myTimer() {
       return radioList;
     }
     
-    // Reads the user selection and pushes the value to an array
+    // READS USER SELCTION AND PLACES IN AN ARRAY
     function choose() {
       selections[questionCounter] = +$('input[name="answer"]:checked').val();
     }
     
-    // Displays next requested element
+    // DISPLAY REQUESTED ELEMENT
     function displayNext() {
       quiz.fadeOut(function() {
         $('#question').remove();
@@ -144,7 +143,7 @@ function myTimer() {
             $('input[value='+selections[questionCounter]+']').prop('checked', true);
           }
           
-          // Controls display of 'prev' button
+          // DISPLAY OFPREVIOUS BUTTON
           if(questionCounter === 1){
             $('#prev').show();
           } else if(questionCounter === 0){
@@ -162,7 +161,7 @@ function myTimer() {
       });
     }
     
-    // Computes score and returns a paragraph element to be displayed
+    // SCORE OUTPUT
     function displayScore() {
       var score = $('<p>',{id: 'question'});
       
