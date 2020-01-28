@@ -1,6 +1,6 @@
 //TIMER
 
-var sec = 300;
+var sec = 120;
 var time = setInterval(myTimer, 1000);
 
 function myTimer() {
@@ -8,30 +8,36 @@ function myTimer() {
     sec--;
     if (sec == -1) {
         clearInterval(time);
-        alert("Times Up!");
+        alert("Times Up! Score will not be saved. Please try again");
+        location.reload(true);
     }
 }
+
+
+
+
+
 
 
 (function() {
 
     var questions = [
         {
-            question: "QUESTIONA 1",
-            choices: [1, "2", "3", "4"],
-            correctAnswer: 1
+            question: "What are variables used for in JavaScript Programs?",
+            choices: ["Storing numbers, dates, or other values", "Varying randomly", "Causing high-school algebra flashbacks", "None of the above"],
+            correctAnswer: 0
           }, {
-            question: "QUESTION 2",
-            choices: ["1", 2, "3", "4"],
+            question: "What should appear at the very end of your JavaScript?",
+            choices: ["Closing script tag", "Opening script tag", "Your end statement", "None of the Above"],
+            correctAnswer: 0
+          }, {
+            question: "Which of the following can't be done with client-side JavaScript?",
+            choices: ["Validating a form", "Sending a form's contents by email", "Storing the form's contents to a database file on the server", "None of the above"],
             correctAnswer: 2
           }, {
-            question: "QUESTION 3",
-            choices: ["1", "2", 3, "4"],
-            correctAnswer: 3
-          }, {
-            question: "QUESTION 4",
-            choices: ["1", "2", "3", 4],
-            correctAnswer: 4
+            question: "Which of the following attribute can hold the JavaScript version?",
+            choices: ["LANGUAGE", "VERSION", "SCRIPT", "None of the above"],
+            correctAnswer: 0
           }];
     
     var questionCounter = 0; //Tracks question number
@@ -102,7 +108,7 @@ function myTimer() {
       var header = $('');
       qElement.append(header);
       
-      var question = $('<p>').append(questions[index].question);
+      var question = $('<h2>').append(questions[index].question);
       qElement.append(question);
       
       var radioButtons = createRadios(index);
@@ -167,7 +173,7 @@ function myTimer() {
       
       var numCorrect = 0;
       for (var i = 0; i < selections.length; i++) {
-        if (selections[i] === questions[i].correctAnswer) {
+        if (selections[i] == questions[i].correctAnswer) {
           numCorrect++;
         }
       }
