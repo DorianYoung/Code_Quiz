@@ -17,7 +17,7 @@ function myTimer() {
 
     var questions = [
         {
-            question: "QUESTION 1",
+            question: "QUESTIONA 1",
             choices: [1, "2", "3", "4"],
             correctAnswer: 1
           }, {
@@ -99,7 +99,7 @@ function myTimer() {
         id: 'question'
       });
       
-      var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+      var header = $('');
       qElement.append(header);
       
       var question = $('<p>').append(questions[index].question);
@@ -113,7 +113,7 @@ function myTimer() {
     
     // CREATE LIST OF ANSWERS
     function createRadios(index) {
-      var radioList = $('<ul>');
+      var radioList = $('<ol>');
       var item;
       var input = '';
       for (var i = 0; i < questions[index].choices.length; i++) {

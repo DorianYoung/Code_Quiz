@@ -2,11 +2,19 @@ body {
     background-color: #fff;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #474544;
-    text-align: center;
 }
 
-/* GENERAL DIV ATTRIBUTES */
-div {
+/* HEADER DIV ATTRIBUTES */
+.header-fluid {
+  background-color: white;
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: right;
+  border-bottom: solid 1px grey;
+}
+
+/* CONTAINER DIV ATTRIBUTES */
+#container {
     background-color: white;
     width: 80%;
     margin: auto;
@@ -28,8 +36,10 @@ div {
   }
   
   .dropdown {
-    position: relative;
     display: inline-block;
+    position: absolute;
+    left: 0px;
+    
   }
   
   .dropdown-content {
@@ -56,18 +66,15 @@ div {
 
 
 
+h2 {
+  text-align: center;
+}
 
-#timer {
-    margin-right: 0px;
+p {
+  text-align: center;
 }
 
 
-/* MAIN DIV */
-.body-fluid {
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 4px 8px #888888;
-}
 
 
 
