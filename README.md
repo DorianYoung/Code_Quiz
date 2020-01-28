@@ -3,13 +3,13 @@
 
 
 
-![Dorian Young](https://github.com/DorianYoung/Password-Generator/blob/master/Assets/Screenshot.jpg?raw=true)
+![Dorian Young](https://github.com/DorianYoung/Code_Quiz/blob/master/Assets/Images/CodeQuizScreenshot.jpg?raw=true)
 https://github.com/DorianYoung
 
 <h2>DORIAN Y JAVASCRIPT CODE QUIZ</h2>
 
 # Code Quiz
-Timed Javascript based code quiz application hat stores high scores client-side. This application runs in the browser and features dynamically updated HTML and CSS powered by JavaScript.
+Timed Javascript based code quiz application that stores high scores client-side. User has two minutes to try to complete all 4 questions before being alerted that time is up. This application runs in the browser and features dynamically updated HTML and CSS powered by JavaScript.
 
 
 >  ## **Table of Contents** :notebook:
@@ -25,30 +25,25 @@ Timed Javascript based code quiz application hat stores high scores client-side.
 
 > ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+github Url
+or
+Download repository and edit source files
 
 
 > ## Usage
 
-The user arrives at the landing page and is presented with a call-to-action to "Start Quiz." Also note the navigation option to "View Highscores" and the "Time" value set at 0.
+The user arrives at the landing page and is presented with a call-to-action to begin quiz. Also note the navigation option to "View Highscores" and the "Time" value set at 120 seconds (2 minutes).
 
 
-Clicking the "Start Quiz" button presents the user with a series of questions. The timer is initialized with a value and immediately begins countdown.
+Clicking the "Next" button presents the user with the next series of questions. The timer is initialized with the 120 second value and immediately begins countdown.
 
 
-Score is calculated by time remaining. Answering quickly and correctly results in a higher score. Answering incorrectly results in a time penalty (for example, 15 seconds are subtracted from time remaining).
-
-
-When time runs out and/or all questions are answered, the user is presented with their final score and asked to enter their initials. Their final score and initials are then stored in localStorage.
-
+Score is calculated by answers correct vs answers you have incorecctly answered.
+When time runs out and/or all questions are answered, the user is presented with their final score.
 
 > ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Online Javascript quiz tutorial.
 
 
 
